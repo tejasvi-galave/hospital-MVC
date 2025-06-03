@@ -122,3 +122,4 @@
 
 <!-- Mirrored from preadmin.dreamstechnologies.com/html/hospital/template-1/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 May 2025 09:34:56 GMT -->
 </html>
+<%-- <jsp:include page="../common/footer.jsp"></jsp:include> --%>

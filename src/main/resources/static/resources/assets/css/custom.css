@@ -229,12 +229,16 @@ textarea.form-control {
   }
 }
 .image{
-	width:20% !important;
-	height:120px !important;
-	margin-right: 70px;
+	width:4% !important;
+	height:75px !important;
+	left:19px;
+	top:15px;
+	position: fixed;
 }
 .logoTitle{
- margin-right:5% !important; 
+ margin-left:24% !important; 
+   font-size: 20px;
+   color:black;
 }
 @media (max-width: 767.98px) {
   h6, .h6 {

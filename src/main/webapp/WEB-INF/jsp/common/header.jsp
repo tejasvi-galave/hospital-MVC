@@ -53,7 +53,7 @@
                 <div class="header-left">
       
 					<a  class="logo ">
-						<img class ="image"  src="resources/assets/img/logo-small.png" alt="Logo"><span class ="logoTitle">Hospital Management</span>
+						<img class ="image"  src="resources/assets/img/logo-small.png" alt="Logo"><span class ="logoTitle">Healthcare+</span>
  
                        
 						
