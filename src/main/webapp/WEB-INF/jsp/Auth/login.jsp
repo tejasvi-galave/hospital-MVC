@@ -13,7 +13,7 @@
              background-image: url('images/bg.jpg'); 
         }
         .form-container {
-            margin-top: 50px;
+            margin-top: 120px;
             padding: 8px;
             margin-left:40px;
             background-color: #ffffff;
@@ -51,7 +51,7 @@
 <section class="container-fluid">
     <section class="row justify-content-center">
         <section class="col-12 col-sm-8 col-md-6 col-lg-4">
-            <form class="form-container" method="post" action="LoginController">
+            <form class="form-container" method="post" action="checkAccount">
                <h4 class="text-center font-weight-bold"> Login</h4>
 
                 <!-- Username -->
@@ -67,7 +67,7 @@
                 </div>
 
                 <!-- Role Selection -->
-                <div class="form-group">
+              <!--   <div class="form-group">
                     <label for="roleSelect">Select Role</label>
                     <select class="form-control" id="roleSelect" name="role" required>
                         <option value="" disabled selected>-Choose Role -</option>
@@ -75,7 +75,7 @@
                         <option value="doctor">Doctor</option>
                         <option value="receptionist">Receptionist</option>
                     </select>
-                </div>
+                </div> -->
 
                 <button type="submit" class="btn btn-primary btn-block">Login In</button>
 
