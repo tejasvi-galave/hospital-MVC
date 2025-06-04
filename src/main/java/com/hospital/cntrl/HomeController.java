@@ -16,7 +16,7 @@ public class HomeController {
 
 	}
 
-	@GetMapping("/login")
+	@GetMapping("/loginForm")
 	public String showLoginForm() {
 		return "Auth/login";
 

@@ -16,6 +16,7 @@ public class DoctorController {
 	@PostMapping("/addDoctor")
 	public void saveDoctor(@ModelAttribute DoctorRequestDto doctorRequestDto) {
 		boolean isAdded = doctorService.saveDoctor(doctorRequestDto);
+
 		if (isAdded) {
 			System.out.println("data added successfully");
 		} else {
