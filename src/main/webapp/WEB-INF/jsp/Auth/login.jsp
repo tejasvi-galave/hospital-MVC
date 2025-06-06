@@ -45,9 +45,14 @@
         margin-top: 20px;
         margin-bottom: 0px !important;
     }
+    
+    #errorMsg{
+    color:red;
+    }
     </style>
 </head>
 <body>
+<p id="errorMsg"> ${errorMsg}</p>
 <section class="container-fluid">
     <section class="row justify-content-center">
         <section class="col-12 col-sm-8 col-md-6 col-lg-4">
@@ -66,21 +71,10 @@
                     <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Password" required>
                 </div>
 
-                <!-- Role Selection -->
-              <!--   <div class="form-group">
-                    <label for="roleSelect">Select Role</label>
-                    <select class="form-control" id="roleSelect" name="role" required>
-                        <option value="" disabled selected>-Choose Role -</option>
-                        <option value="admin">Admin</option>
-                        <option value="doctor">Doctor</option>
-                        <option value="receptionist">Receptionist</option>
-                    </select>
-                </div> -->
-
                 <button type="submit" class="btn btn-primary btn-block">Login In</button>
 
                 <div class="form-footer text-center mt-3">
-                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                    <p>Don't have an account? <a href="SignUpForm">Sign Up</a></p>
                 </div>
             </form>
         </section>

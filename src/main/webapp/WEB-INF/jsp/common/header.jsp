@@ -205,7 +205,7 @@
 							<li class="submenu"> 
 								<a href="#"><i class="fe fe-user-plus"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
 									<ul style="display: none;">
-									<li><a href="add-patient.html">Add Doctor</a></li>
+									<li><a href="doctorForm">Add Doctor</a></li>
 									<li><a href="select-patient.html">All Doctor</a></li>
 								</ul>
 							</li>
