@@ -24,7 +24,7 @@ public class DoctorServiceImpl implements DoctorService {
 		HttpEntity<DoctorRequestDto> request = new HttpEntity<>(doctorRequestDto, headers);
 
 		try {
-			Boolean response = restTemplate.postForObject(url, request, Boolean.class);
+			boolean response = restTemplate.postForObject(url, request, DoctorRequestDto.class) != null;
 			return response;
 		} catch (Exception e) {
 			e.printStackTrace();
