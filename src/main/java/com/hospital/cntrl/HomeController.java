@@ -22,4 +22,10 @@ public class HomeController {
 
 	}
 
+	@GetMapping("/SignUpForm")
+	public String showSignUpForm() {
+		return "Auth/signUp";
+
+	}
+
 }
