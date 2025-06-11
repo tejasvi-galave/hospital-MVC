@@ -62,7 +62,7 @@
                 <!-- Username -->
                 <div class="form-group">
                     <label for="Inputuser1">Username</label>
-                    <input type="text" class="form-control" id="Inputuser1" name="userName" placeholder="Enter username" required>
+                    <input type="text" class="form-control" id="Inputuser1" name="username" placeholder="Enter username" required>
                 </div>
 
                 <!-- Password -->

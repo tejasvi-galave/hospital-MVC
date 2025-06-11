@@ -28,4 +28,9 @@ public class HomeController {
 
 	}
 
+	@GetMapping("/updateForm")
+	public String showUpdateForm() {
+		return "Doctors/update";
+
+	}
 }

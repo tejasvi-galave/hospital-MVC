@@ -15,19 +15,22 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public LoginResponseDto checkExistAccount(LoginRequestDto loginRequestDto) {
-		System.out.println(loginRequestDto.getUserName());
+		System.out.println(loginRequestDto.getUsername());
 		System.out.println(loginRequestDto.getPassword());
-
-		String url = "http://localhost:8080/checkAccount";
+		String url = "http://localhost:8080/internalCheck";
 		RestTemplate restTemplate = new RestTemplate();
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-
 		HttpEntity<LoginRequestDto> request = new HttpEntity<>(loginRequestDto, headers);
 
-		LoginResponseDto responsedto = restTemplate.postForObject(url, request, LoginResponseDto.class);
-		return responsedto;
-
+		try {
+			LoginResponseDto dto = restTemplate.postForObject(url, request, LoginResponseDto.class);
+			System.out.println("serviceImpl" + dto);
+			return dto;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }

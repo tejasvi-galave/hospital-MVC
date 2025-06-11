@@ -14,6 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DoctorRequestDto {
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String phone;
@@ -24,4 +25,5 @@ public class DoctorRequestDto {
 	private LocalTime fromTime;
 	@DateTimeFormat(pattern = "H:M")
 	private LocalTime toTime;
+
 }
