@@ -32,7 +32,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-sm">
-                <form class="needs-validation" action="addDoctor" method="post">
+                <form class="needs-validation" action="doctor/addDoctor" method="post">
                     <h5>Add Doctor</h5>
 
                     <div class="row">

@@ -16,7 +16,7 @@ public class SignUpServiceImpl implements SignUpService {
 	public boolean CreateAccount(SignUpReqDto signUpReqDto) {
 		System.out.println(signUpReqDto.getRole());
 
-		String url = "http://localhost:8080/SignUpAccount";
+		String url = "http://localhost:8080/signUp/createaccount";
 		RestTemplate restTemplate = new RestTemplate();
 
 		HttpHeaders headers = new HttpHeaders();

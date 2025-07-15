@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 	@GetMapping("/")
 	public String name() {
-		return "common/index";
+		return "Auth/login";
 	}
 
 	@GetMapping("/doctorForm")
@@ -28,9 +28,23 @@ public class HomeController {
 
 	}
 
-	@GetMapping("/updateForm")
+	@GetMapping("/DoctorUpdateForm")
 	public String showUpdateForm() {
 		return "Doctors/update";
+	}
 
+	@GetMapping("/patientForm")
+	public String showPatientForm() {
+		return "patients/add";
+	}
+
+	@GetMapping("/receptionistForm")
+	public String showReceptionistForm() {
+		return "Receptionist/add";
+	}
+
+	@GetMapping("/ReceptionistUpdateForm")
+	public String showReceptUpdateForm() {
+		return "Receptionist/update";
 	}
 }

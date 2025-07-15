@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.hospital.loginDto.LoginRequestDto;
-import com.hospital.loginDto.LoginResponseDto;
+import com.hospital.Dto.LoginReqDto;
+import com.hospital.Dto.LoginResDto;
 import com.hospital.service.LoginService;
 
 @Controller
@@ -17,28 +17,28 @@ public class LoginController {
 	LoginService loginService;
 
 	@PostMapping("/checkAccount")
-	public String checkExistAccount(@ModelAttribute LoginRequestDto loginRequestDto, HttpSession session) {
+	public String checkExistAccount(@ModelAttribute LoginReqDto loginReqDto, HttpSession session) {
 
-		String userName = loginRequestDto.getUsername();
-//		String password = loginRequestDto.getPassword();
-
-		System.out.println(userName);
-		LoginResponseDto responseDto = loginService.checkExistAccount(loginRequestDto);
-//		session.setAttribute("id", id);
-		session.setAttribute("user", userName);
-//		session.setAttribute("password", password);
+		LoginResDto responseDto = loginService.checkExistAccount(loginReqDto);
+		int id = responseDto.getId();
+		System.out.println(id);
+		String userName = responseDto.getUsername();
+		String role = responseDto.getRole();
 		if (responseDto != null) {
-
+			session.setAttribute("id", id);
+			session.setAttribute("role", role);
+			session.setAttribute("user", userName);
 			if ("admin".equalsIgnoreCase(responseDto.getRole())) {
-				return "common/index"; // admin dashboard
-			} else if ("doctor".equalsIgnoreCase(responseDto.getRole())) {
-				return "doctor/dashboard"; // your doctor JSP
-
+				return "common/index";
+				// admin dashboard
 			} else if ("receptionist".equalsIgnoreCase(responseDto.getRole())) {
-				return "reception/dashboard"; // your receptionist JSP
+				return "common/index1";
+
+			} else if ("doctor".equalsIgnoreCase(responseDto.getRole())) {
+				return "common/index2";
 
 			} else {
-				return "Auth/login"; // fallback
+				return "Auth/login";
 			}
 		}
 
