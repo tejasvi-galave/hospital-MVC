@@ -2333,9 +2333,9 @@ a.bg-danger:focus, a.bg-danger:hover, button.bg-danger:focus, button.bg-danger:h
   top: 11px;
   right: 15px;
 }
-.sidebar .sidebar-menu .menu-arrow:before {
+/* .sidebar .sidebar-menu .menu-arrow:before {
   content: "\f105";
-}
+} */
 .sidebar ul ul {
   display: none;
 }

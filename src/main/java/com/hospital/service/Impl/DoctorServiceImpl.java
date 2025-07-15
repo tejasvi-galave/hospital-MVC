@@ -62,7 +62,7 @@ public class DoctorServiceImpl implements DoctorService {
 
 	public boolean updateDoctor(DoctorRequestDto doctorRequestDto) {
 
-		String url = "http://localhost:8080/doctor/add";
+		String url = "http://localhost:8080/doctor/update";
 		RestTemplate restTemplate = new RestTemplate();
 
 		HttpHeaders headers = new HttpHeaders();

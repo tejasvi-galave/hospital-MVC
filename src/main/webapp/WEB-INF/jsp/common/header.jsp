@@ -1,4 +1,9 @@
-
+<%@page import="org.springframework.web.context.request.SessionScope"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    String role = (String) session.getAttribute("role");
+%>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -13,32 +18,40 @@
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Doctors Appointment HTML Website Templates | Doccure">
 		<meta property="og:description" content="The responsive professional Doccure template offers many features, like scheduling appointments with  top doctors, clinics, and hospitals via voice, video call & chat.">
-		<meta property="og:image" content="resources/assets/img/preview-banner.html">
+		<meta property="og:image" content="${pageContext.request.contextPath}/resources/assets/img/preview-banner.html">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="twitter:domain" content="https://doccure.dreamstechnologies.com/html/">
 		<meta property="twitter:url" content="https://doccure.dreamstechnologies.com/html/">
 		<meta name="twitter:title" content="Doctors Appointment HTML Website Templates | Doccure">
 		<meta name="twitter:description" content="The responsive professional Doccure template offers many features, like scheduling appointments with  top doctors, clinics, and hospitals via voice, video call & chat.">
-		<meta name="twitter:image" content="resources/assets/img/preview-banner.html">	
+		<meta name="twitter:image" content="${pageContext.request.contextPath}/resources/assets/img/preview-banner.html">	
         <title>Doccure - Dashboard</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="resources/assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/img/favicon.png">
 		
 		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/bootstrap.min.css">
 		
 		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="resources/assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="resources/assets/plugins/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/plugins/fontawesome/css/all.min.css">
 		
 		<!-- Feathericon CSS -->
-        <link rel="stylesheet" href="resources/assets/css/feathericon.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/feathericon.min.css">
 		
-		<link rel="stylesheet" href="resources/assets/plugins/morris/morris.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/plugins/morris/morris.css">
 		
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="resources/assets/css/custom.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/custom.css">
+        
+        
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"/>
+
         
     </head>
     <body>
@@ -53,10 +66,8 @@
                 <div class="header-left">
       
 					<a  class="logo ">
-						<img class ="image"  src="resources/assets/img/logo-small.png" alt="Logo"><span class ="logoTitle">Healthcare+</span>
+						<img class ="image"  src="${pageContext.request.contextPath}/resources/assets/img/logo-small.png" alt="Logo"><span class ="logoTitle">Healthcare+</span>
  
-                       
-						
 					</a>
                 </div>
 				<!-- /Logo -->
@@ -97,7 +108,7 @@
 										<a href="#">
 											<div class="notify-block d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="resources/assets/img/doctors/doctor-thumb-01.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="${pageContext.request.contextPath}/resources/assets/img/doctors/doctor-thumb-01.jpg">
 												</span>
 												<div class="media-body flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Dr. Ruby Perrin</span> Schedule <span class="noti-title">her appointment</span></p>
@@ -110,7 +121,7 @@
 										<a href="#">
 											<div class="notify-block d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="resources/assets/img/patients/patient1.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="${pageContext.request.contextPath}/resources/assets/img/patients/patient1.jpg">
 												</span>
 												<div class="media-body flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Charlene Reed</span> has booked her appointment to <span class="noti-title">Dr. Ruby Perrin</span></p>
@@ -123,7 +134,7 @@
 										<a href="#">
 											<div class="notify-block d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="resources/assets/img/patients/patient2.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="${pageContext.request.contextPath}/resources/assets/img/patients/patient2.jpg">
 												</span>
 												<div class="media-body flex-grow-1">
 												<p class="noti-details"><span class="noti-title">Travis Trimble</span> sent a amount of $210 for his <span class="noti-title">appointment</span></p>
@@ -136,7 +147,7 @@
 										<a href="#">
 											<div class="notify-block d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="resources/assets/img/patients/patient3.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="${pageContext.request.contextPath}/resources/assets/img/patients/patient3.jpg">
 												</span>
 												<div class="media-body flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Carl Kelly</span> send a message <span class="noti-title"> to his doctor</span></p>
@@ -157,20 +168,18 @@
 					<!-- User Menu -->
 					<li class="nav-item dropdown has-arrow">
 						<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-							<span class="user-img"><img class="rounded-circle" src="resources/assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+							<span class="user-img"><img class="rounded-circle" src="${pageContext.request.contextPath}/resources/assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
 						</a>
 						<div class="dropdown-menu">
 							<div class="user-header">
 								<div class="avatar avatar-sm">
-									<img src="resources/assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+									<img src="${pageContext.request.contextPath}/resources/assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
 								</div>
 								<div class="user-text">
 									<h6>Ryan Taylor</h6>
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
-							</div>
-							<a class="dropdown-item" href="profile.html">My Profile</a>
-							<a class="dropdown-item" href="settings.html">Settings</a>
+							</div>					
 							<a class="dropdown-item" href="login.html">Logout</a>
 						</div>
 					</li>
@@ -184,51 +193,109 @@
 			
 			<!-- Sidebar -->
             <div class="sidebar" id="sidebar">
-                <div class="sidebar-inner slimscroll">
-					<div id="sidebar-menu" class="sidebar-menu">
-						<ul>
-							<li class="menu-title"> 
-								<span style="font-size:17px">Admin Dashboard</span>
-							</li>
-							<li class="active"> 
-								<a href="index.jsp"><i class="fe fe-home"></i> <span>Dashboard</span></a>
-							</li>
-							<br>
-							<li> 
-								<a href="#"><i class="fe fe-layout"></i> <span>Appointments</span><span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-								<li><a href="add-appointment.jsp">Add Appointment</a></li>
-                                 <li><a href="all-appointments.jsp">All Appointments</a></li>
-								</ul>
-							</li>
-							<br>
-							<li class="submenu"> 
-								<a href="#"><i class="fe fe-user-plus"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
-									<ul style="display: none;">
-									<li><a href="doctorForm">Add Doctor</a></li>
-									<li><a href="getDoctorLists">All Doctor</a></li>
-								</ul>
-							</li>
-							<br>
-							<li class="submenu">
-								<a href="#"><i class="fa fa-heartbeat"></i> <span>Patients</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="add-patient.html">Add Patient</a></li>
-									<li><a href="select-patient.html">Select Patient</a></li>
-								</ul>
-							</li>
-                            <br>
-							
-							<li class="submenu">
-							  <a href="#"><i class="fas fa-building"></i>
-                                <span> Receptionist </span> <span class="menu-arrow"></span></a>
-							  <ul style="display: none;">
-							    <li><a href="add_patient.html"> Add Receptionist</a></li>
-							    <li><a href="all_patients.html"> All Receptionist </a></li>
-							  </ul>
-							</li>
-							
-						</ul>
-					</div>
-                </div>
+             <div class="sidebar-inner slimscroll">
+    <div id="sidebar-menu" class="sidebar-menu">
+    
+        <!-- Admin Sidebar -->
+        <c:if test="${sessionScope.role == 'admin'}">
+            <ul>
+                <li class="menu-title">
+                    <span style="font-size:17px">Admin Dashboard</span>
+                </li>
+                <li class="active">
+                    <a href="index.jsp"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                </li>
+                <br>
+                <li class="submenu">
+                    <a href="#"><i class="fe fe-user-plus"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="doctorForm">Add Doctor</a></li>
+                        <li><a href="doctor/getDoctorLists">All Doctor</a></li>
+                    </ul>
+                </li>
+                <br>
+                <li class="submenu">
+                    <a href="#"><i class="fas fa-building"></i> <span>Receptionist</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="receptionistForm">Add Receptionist</a></li>
+                        <li><a href="receptionist/getAllRecord">All Receptionist</a></li>
+                    </ul>
+                </li>
+                <br>
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-heartbeat"></i> <span>Patients</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="patientForm">Add Patient</a></li>
+                        <li><a href="patient/getActiveRecordByUserId">All Patient</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </c:if>
+
+        <!-- Receptionist Sidebar -->
+        <c:if test="${sessionScope.role == 'receptionist'}">
+            <ul>
+                <li class="menu-title">
+                    <span style="font-size:17px">Receptionist Dashboard</span>
+                </li>
+                <li>
+                    <a href="index.jsp"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                </li>
+                <br>
+                <li>
+                    <a href="#"><i class="fe fe-layout"></i> <span>Appointments</span><span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="all-appointments.jsp">All Appointments</a></li>
+                    </ul>
+                </li>
+                <br>
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-heartbeat"></i> <span>Patients</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="patientForm">Add Patient</a></li>
+                        <li><a href="patient/getActiveRecordByUserId">All Patient</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </c:if>
+
+        <!-- Doctor Sidebar -->
+        <c:if test="${sessionScope.role == 'doctor'}">
+            <ul>
+                <li class="menu-title">
+                    <span style="font-size:17px">Doctor Dashboard</span>
+                </li>
+                <li class="active">
+                    <a href="index.jsp"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                </li>
+                <br>
+                <li class="submenu">
+                    <a href="#"><i class="fe fe-layout"></i> <span>Appointments</span><span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="all-appointments.jsp">All Appointments</a></li>
+                    </ul>
+                </li>
+                <br>
+                <li class="submenu">
+                    <a href="#"><i class="fas fa-building"></i> <span>Receptionist</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/receptionistForm">Add Receptionist</a></li>
+                        <li><a href="/receptionist/getAllRecord">All Receptionist</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </c:if>
+
+        <!-- Fallback (No role / invalid role) -->
+        <c:if test="${empty sessionScope.role}">
+            <ul>
+                <li><span style="color:red;">Invalid role or not logged in</span></li>
+            </ul>
+        </c:if>
+
+    </div>
+</div>
+
             </div>
+
+     

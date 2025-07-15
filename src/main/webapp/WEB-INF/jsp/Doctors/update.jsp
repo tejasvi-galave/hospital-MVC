@@ -32,7 +32,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-sm">
-                <form class="needs-validation" action="editDoctor" method="post">
+                <form class="needs-validation" action="doctor/editDoctor" method="post">
                     <input type="hidden" name="id" value="${param.id}">
                     <h5>Edit Doctor</h5>
 

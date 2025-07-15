@@ -4,11 +4,11 @@
   
   <modelVersion>4.0.0</modelVersion>
 
- <groupId>com.hospital.management</groupId>
+ <groupId>com.hospital</groupId>
   <artifactId>hospital_MVC</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>com.hospital.management</name>
+ <!-- <packaging>war</packaging-->
+  <name>com.hospital</name>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -64,18 +64,14 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
 
-        <!-- Log4j2 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-        </dependency>
+     
 
         <!-- Spring Boot DevTools -->
-        <dependency>
+      <!--  <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-        </dependency>
+        </dependency-->
 
         <!-- Quartz Scheduler -->
         <dependency>
@@ -117,7 +113,11 @@
     </exclusions>
 </dependency>
 
-
+      <!--  <dependency>
+        	<groupId>com.hospital.management</groupId>
+        	<artifactId>Hospital_Api</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>-->
     </dependencies>
 
     <build>
