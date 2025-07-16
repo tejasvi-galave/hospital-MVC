@@ -12,7 +12,7 @@ import com.hospital.Dto.LoginResDto;
 import com.hospital.service.LoginService;
 
 @Controller
-public class LoginController {
+public class loginController {
 	@Autowired
 	LoginService loginService;
 

@@ -15,7 +15,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public LoginResDto checkExistAccount(LoginReqDto loginReqDto) {
-		String url = "http://localhost:8080/checkAccount";
+		String url = "http://localhost:8080/internalCheck";
 		RestTemplate restTemplate = new RestTemplate();
 
 		HttpHeaders headers = new HttpHeaders();
