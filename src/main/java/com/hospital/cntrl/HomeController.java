@@ -47,4 +47,5 @@ public class HomeController {
 	public String showReceptUpdateForm() {
 		return "Receptionist/update";
 	}
+
 }

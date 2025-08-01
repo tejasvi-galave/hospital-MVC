@@ -15,4 +15,6 @@ public interface DoctorService {
 	List<DoctorResponseDto> getAllDoctor();
 
 	boolean updateDoctor(DoctorRequestDto doctorRequestDto);
+
+	DoctorResponseDto getDoctorByEmail(String email);
 }
