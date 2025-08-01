@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String role = (String) session.getAttribute("role");
+     String name = (String) session.getAttribute("user");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -176,8 +177,8 @@
 									<img src="${pageContext.request.contextPath}/resources/assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
 								</div>
 								<div class="user-text">
-									<h6>Ryan Taylor</h6>
-									<p class="text-muted mb-0">Administrator</p>
+									   <h6>${sessionScope.role}</h6> 
+									    <p>${sessionScope.name}</p>
 								</div>
 							</div>					
 							<a class="dropdown-item" href="login.html">Logout</a>
@@ -201,13 +202,14 @@
             <ul>
                 <li class="menu-title">
                     <span style="font-size:17px">Admin Dashboard</span>
+                    
                 </li>
                 <li class="active">
                     <a href="index.jsp"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                 </li>
                 <br>
                 <li class="submenu">
-                    <a href="#"><i class="fe fe-user-plus"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
+                    <a href="index.jsp"><i class="fe fe-user-plus"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a href="doctorForm">Add Doctor</a></li>
                         <li><a href="doctor/getDoctorLists">All Doctor</a></li>
@@ -229,11 +231,19 @@
                         <li><a href="patient/getActiveRecordByUserId">All Patient</a></li>
                     </ul>
                 </li>
+                <br>
+                 <li>
+                    <a href="#"><i class="fe fe-layout"></i> <span>Appointments</span><span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="appointments/all">All Appointments</a></li>
+                    </ul>
+                </li>
+                
             </ul>
         </c:if>
 
         <!-- Receptionist Sidebar -->
-        <c:if test="${sessionScope.role == 'receptionist'}">
+        <c:if test="${sessionScope.role.equals('receptionist')}">
             <ul>
                 <li class="menu-title">
                     <span style="font-size:17px">Receptionist Dashboard</span>
@@ -245,7 +255,7 @@
                 <li>
                     <a href="#"><i class="fe fe-layout"></i> <span>Appointments</span><span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="all-appointments.jsp">All Appointments</a></li>
+                        <li><a href="appointments/all">All Appointments</a></li>
                     </ul>
                 </li>
                 <br>
@@ -272,7 +282,7 @@
                 <li class="submenu">
                     <a href="#"><i class="fe fe-layout"></i> <span>Appointments</span><span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="all-appointments.jsp">All Appointments</a></li>
+                        <li><a href="appointments/all">All Appointments</a></li>
                     </ul>
                 </li>
                 <br>
@@ -295,7 +305,6 @@
 
     </div>
 </div>
-
-            </div>
+</div>
 
      

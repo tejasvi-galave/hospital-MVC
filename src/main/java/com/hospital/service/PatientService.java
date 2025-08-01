@@ -17,7 +17,7 @@ public interface PatientService {
 
 	boolean updatePatient(PatientsReqDto patientsReqDto);
 
-	List<PatientsResDto> findInactivePatientsByuserId(int userId);
+	PageResponse<PatientsResDto> findInactivePatientsByuserId(int userId, int page, int size);
 
 	List<PatientsResDto> searchPatientByNameAndUserId(String name, String status, int userId);
 

@@ -78,7 +78,22 @@ public class DoctorServiceImpl implements DoctorService {
 			e.printStackTrace();
 			return false;
 		}
+	}
 
+	public DoctorResponseDto getDoctorByEmail(String email) {
+		try {
+			String url = "http://localhost:8080/doctor/byEmail?email=" + email;
+
+			RestTemplate restTemplate = new RestTemplate();
+
+			DoctorResponseDto response = restTemplate.getForObject(url, DoctorResponseDto.class);
+
+			System.out.println("response=" + response);
+			return response;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

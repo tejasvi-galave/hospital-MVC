@@ -15,7 +15,11 @@
   color: red;
   float: left;
 }
-
+/* a:hover, a:focus, a:active {
+  outline: none;
+  text-decoration: none;
+ 
+} */
 .attach-file, .login-wrapper .loginbox .login-right, .align-center {
   display: flex;
   display: -webkit-flex;

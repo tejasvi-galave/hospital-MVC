@@ -45,12 +45,14 @@ public class ReceptionistController {
 	}
 
 	@PostMapping("/update")
-	public String update(@ModelAttribute ReceptionistReqDto receptionistReqDto) {
+	public String updateRecept(@ModelAttribute ReceptionistReqDto receptionistReqDto) {
+		System.out.println(receptionistReqDto.getId());
 		boolean isAdded = receptionistService.update(receptionistReqDto);
 		return "redirect:/receptionist/getAllRecord";
 	}
 
 	@GetMapping("/deleteReceptionist")
+
 	public String delete(@RequestParam int id) {
 		System.out.println(id);
 		boolean isAdded = receptionistService.delete(id);

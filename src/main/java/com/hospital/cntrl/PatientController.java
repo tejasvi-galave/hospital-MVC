@@ -81,9 +81,9 @@ public class PatientController {
 
 		if ("admin".equalsIgnoreCase(role)) {
 
-			pageResponse = patientService.findAllInActivePatient(page, size); // all inactive
+			pageResponse = patientService.findAllInActivePatient(page, size);
 		} else if ("receptionist".equalsIgnoreCase(role)) {
-			List<PatientsResDto> list = patientService.findInactivePatientsByuserId(userId);
+			pageResponse = patientService.findInactivePatientsByuserId(userId, page, size);
 		}
 		model.addAttribute("patientList", pageResponse.getContent());
 		model.addAttribute("currentPage", pageResponse.getCurrentPage());

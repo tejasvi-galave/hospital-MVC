@@ -10,6 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReceptionistReqDto {
+	private int id;
 	private String name;
 	private String email;
 	private String phone;
